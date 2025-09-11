@@ -1,15 +1,18 @@
 import { useState } from "react";
-import { Menu, X, Leaf } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#services", label: "Services" },
-    { href: "#products", label: "Products" },
-    { href: "#contact", label: "Contact" },
+
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/services", label: "Services" },
+    { to: "/products", label: "Products" },
+    { to: "/contact", label: "Contact" },
   ];
 
   return (
@@ -32,20 +35,22 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
+              <Link
+                key={item.to}
+                to={item.to}
                 className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <Button variant="default" className="bg-gradient-primary hover:opacity-90">
-              Get Started
-            </Button>
+            <Link to="/get-started">
+              <Button variant="default" className="bg-gradient-primary hover:opacity-90">
+                Get Started
+              </Button>
+            </Link>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
@@ -62,19 +67,21 @@ const Navigation = () => {
           <div className="md:hidden border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                <Link
+                  key={item.to}
+                  to={item.to}
                   className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="default" className="w-full bg-gradient-primary">
-                  Get Started
-                </Button>
+                <Link to="/get-started">
+                  <Button variant="default" className="w-full bg-gradient-primary">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
