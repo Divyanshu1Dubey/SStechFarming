@@ -35,7 +35,7 @@ const About = () => {
               About SS TechFarming
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Based in Jharkhand, India, we are an innovative agritech startup specializing in 
+              Based in Bokaro, Jharkhand, Bharat, we are an innovative agritech startup specializing in 
               mushroom cultivation and precision farming technologies. Our mission is to transform 
               Indian agriculture through sustainable, technology-driven solutions.
             </p>

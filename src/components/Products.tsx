@@ -8,30 +8,37 @@ const Products = () => {
   const products = [
     {
       icon: Package,
+      title: "White Button Mushroom Spawn",
+      description: "High-quality spawn produced in our state-of-the-art laboratory with stringent quality controls.",
+      features: ["Laboratory tested", "AI-optimized production", "Quality guaranteed"],
+      badge: "Lab Grade"
+    },
+    {
+      icon: Package,
       title: "Fresh White Button Mushrooms",
       description: "Premium quality fresh mushrooms grown in controlled environments with optimal nutrition and taste.",
-      features: ["Organic certification", "Fresh daily harvest", "Premium packaging"],
+      features: ["Organic certification", "AI-monitored growth", "Premium packaging"],
       badge: "Fresh"
     },
     {
       icon: ShoppingCart,
       title: "Canned Mushroom Products",
       description: "Processed and preserved mushroom products with extended shelf life for commercial and retail markets.",
-      features: ["Long shelf life", "Retail packaging", "Bulk options"],
+      features: ["Data-driven processing", "AI quality control", "Bulk options"],
       badge: "Processed"
     },
     {
       icon: Recycle,
       title: "Organic Fertilizer",
       description: "High-quality organic fertilizer made from used mushroom compost, rich in nutrients for soil health.",
-      features: ["100% organic", "Rich in NPK", "Soil health improvement"],
+      features: ["Algorithm-optimized NPK", "AI soil analysis", "Quality algorithms"],
       badge: "Eco-Friendly"
     },
     {
       icon: Award,
       title: "Value-Added Products",
       description: "Innovative mushroom-based food products including powders, extracts, and specialty preparations.",
-      features: ["Health supplements", "Culinary products", "Custom formulations"],
+      features: ["AI-driven formulations", "Data-optimized nutrition", "Custom algorithms"],
       badge: "Premium"
     }
   ];

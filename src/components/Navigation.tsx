@@ -24,7 +24,7 @@ const Navigation = () => {
               className="w-12 h-12 object-contain"
             />
             <div>
-              <h1 className="text-xl font-bold text-foreground">SS TechFarming</h1>
+              <h1 className="text-xl font-bold text-foreground">SS TechFarming India</h1>
               <p className="text-xs text-muted-foreground">Farm Smarter</p>
             </div>
           </div>

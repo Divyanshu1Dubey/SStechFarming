@@ -50,7 +50,7 @@ const Footer = () => {
                   className="w-12 h-12 object-contain"
                 />
                 <div>
-                  <h1 className="text-xl font-bold">SS TechFarming</h1>
+                  <h1 className="text-xl font-bold">SS TechFarming India</h1>
                   <p className="text-sm text-white/70">Farm Smarter</p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">Jharkhand, India</span>
+                  <span className="text-sm">Bokaro, Jharkhand, Bharat</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-agri-secondary flex-shrink-0" />
@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">info@sstechfarming.com</span>
+                  <span className="text-sm">info@sstechfarmingindia.com</span>
                 </div>
               </div>
 
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-white/70">
-              © 2024 SS TechFarming. All rights reserved.
+              © 2024 SS TechFarming India Private Limited. All rights reserved.
             </div>
             
             <div className="flex space-x-6 text-sm">

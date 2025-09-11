@@ -9,7 +9,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Headquarters",
-      details: "Jharkhand, India",
+      details: "Bokaro, Jharkhand, Bharat",
       description: "Innovation Hub & Research Center"
     },
     {
@@ -21,7 +21,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@agrotechjharkhand.com",
+      details: "info@sstechfarmingindia.com",
       description: "Quick Response Guaranteed"
     },
     {
