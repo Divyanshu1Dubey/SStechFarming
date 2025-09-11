@@ -57,6 +57,27 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        agri: {
+          primary: "hsl(var(--agri-primary))",
+          secondary: "hsl(var(--agri-secondary))",
+          earth: "hsl(var(--agri-earth))",
+          soil: "hsl(var(--agri-soil))",
+          growth: "hsl(var(--agri-growth))",
+        },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-earth": "var(--gradient-earth)",
+      },
+      boxShadow: {
+        soft: "var(--shadow-soft)",
+        medium: "var(--shadow-medium)",
+        strong: "var(--shadow-strong)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
+        bounce: "var(--transition-bounce)",
       },
       borderRadius: {
         lg: "var(--radius)",
