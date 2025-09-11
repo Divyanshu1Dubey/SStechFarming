@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import mushroomProductsImage from "@/assets/mushroom-products.jpg";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const products = [
@@ -44,7 +45,7 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="py-20 bg-gradient-to-b from-agri-growth/10 to-background">
+    <section id="products" className="py-20 bg-gradient-to-b from-agri-growth/10 to-background shadow-[inset_0_100px_200px_-100px_rgba(44,165,17,0.5)]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -84,10 +85,11 @@ const Products = () => {
                     <div className="text-2xl font-bold text-agri-primary">Grade A+</div>
                   </div>
                 </div>
-
+                 <Link to="/products">
                 <Button className="w-fit bg-gradient-primary hover:opacity-90">
                   View Product Catalog
                 </Button>
+                 </Link>
               </div>
 
               <div className="relative min-h-[300px]">
@@ -121,7 +123,7 @@ const Products = () => {
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 flex flex-col items-start">
                     {product.features.map((feature, idx) => (
                       <li key={idx} className="text-xs flex items-center justify-center">
                         <span className="w-2 h-2 bg-agri-primary rounded-full mr-2"></span>
@@ -147,14 +149,13 @@ const Products = () => {
               <Button 
                 variant="secondary" 
                 size="lg" 
-                className="bg-white text-agri-primary hover:bg-white/90"
+                className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
               >
                 Request Quote
               </Button>
               <Button 
-                variant="outline" 
                 size="lg" 
-                className="border-white text-white hover:bg-white hover:text-agri-primary"
+                className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
               >
                 Download Catalog
               </Button>

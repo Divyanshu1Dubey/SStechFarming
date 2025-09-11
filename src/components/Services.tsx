@@ -53,7 +53,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-20 bg-background shadow-[inset_0_100px_200px_-100px_rgba(44,165,17,0.5)]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

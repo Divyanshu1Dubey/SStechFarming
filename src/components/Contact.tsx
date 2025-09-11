@@ -44,7 +44,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-background to-agri-growth/10">
+    <section id="contact" className="py-20 bg-gradient-to-b from-background to-agri-growth/10 shadow-[inset_0_100px_200px_-100px_rgba(44,165,17,0.5)]">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}

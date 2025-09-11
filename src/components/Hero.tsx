@@ -1,12 +1,13 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-mushroom-farm.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
@@ -24,23 +25,24 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            From spawn labs to precision farming, we're building India's most advanced 
-            agritech ecosystem. Transforming agriculture through innovation, technology, 
+            From spawn labs to precision farming, we're building India's most advanced
+            agritech ecosystem. Transforming agriculture through innovation, technology,
             and sustainable practices.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-white text-agri-primary hover:bg-white/90 shadow-strong"
-            >
-              Explore Our Services
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-agri-primary"
+            <Link to="/services">
+              <Button
+                size="lg"
+                className="bg-white text-agri-primary hover:bg-white/90 shadow-strong transform transition-transform duration-300 hover:scale-105 "
+              >
+                Explore Our Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+            <Button
+              size="lg"
+              className="bg-white text-agri-primary hover:bg-white/90 shadow-strong transform transition-transform duration-300 hover:scale-105"
             >
               Watch Our Story
             </Button>
