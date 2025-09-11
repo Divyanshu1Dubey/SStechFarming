@@ -32,7 +32,7 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              About AgroTech Jharkhand
+              About SS TechFarming
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Based in Jharkhand, India, we are an innovative agritech startup specializing in 

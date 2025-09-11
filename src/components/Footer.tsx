@@ -43,13 +43,15 @@ const Footer = () => {
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <Leaf className="w-6 h-6 text-white" />
-                </div>
+              <div className="flex items-center space-x-3 mb-6">
+                <img 
+                  src="/lovable-uploads/8dedc6fe-2fb9-4f3a-9de6-ae8978d311d3.png" 
+                  alt="SS TechFarming Logo" 
+                  className="w-12 h-12 object-contain"
+                />
                 <div>
-                  <h1 className="text-xl font-bold">AgroTech Jharkhand</h1>
-                  <p className="text-sm text-white/70">Mushroom Innovation</p>
+                  <h1 className="text-xl font-bold">SS TechFarming</h1>
+                  <p className="text-sm text-white/70">Farm Smarter</p>
                 </div>
               </div>
               
@@ -71,7 +73,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">info@agrotechjharkhand.com</span>
+                  <span className="text-sm">info@sstechfarming.com</span>
                 </div>
               </div>
 
@@ -138,7 +140,7 @@ const Footer = () => {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-white/70">
-              © 2024 AgroTech Jharkhand. All rights reserved.
+              © 2024 SS TechFarming. All rights reserved.
             </div>
             
             <div className="flex space-x-6 text-sm">
