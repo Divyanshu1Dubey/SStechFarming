@@ -112,7 +112,7 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <form action="https://formspree.io/f/xqadjeqq" method="POST" className="space-y-6">
+                  <form action="https://formspree.io/f/mpwjnpgp" method="POST" className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
