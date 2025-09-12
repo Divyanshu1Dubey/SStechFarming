@@ -53,7 +53,7 @@ const Contact = () => {
               Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ready to transform your agricultural venture? Contact our team of experts 
+              Ready to transform your agricultural venture? Contact our team of experts
               for consultation, product inquiries, or partnership opportunities.
             </p>
           </div>
@@ -64,7 +64,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-6 text-foreground">
                 Contact Information
               </h3>
-              
+
               {contactInfo.map((info, index) => (
                 <Card key={index} className="hover:shadow-medium transition-shadow duration-300">
                   <CardContent className="p-6">
@@ -110,66 +110,66 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <form action="https://formspree.io/f/xqadjeqq" method="POST" className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">
+                          First Name *
+                        </label>
+                        <Input name="firstName" placeholder="Enter your first name" required />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">
+                          Last Name *
+                        </label>
+                        <Input name="lastName" placeholder="Enter your last name" required />
+                      </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">
+                          Email Address *
+                        </label>
+                        <Input type="email" name="email" placeholder="your@email.com" required />
+                      </div>
+                      <div>
+                        <label className="text-sm font-medium text-foreground mb-2 block">
+                          Phone Number
+                        </label>
+                        <Input name="phone" placeholder="+91 XXX-XXX-XXXX" />
+                      </div>
+                    </div>
+
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        First Name *
+                        Service Interest
                       </label>
-                      <Input placeholder="Enter your first name" />
+                      <select name="service" className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
+                        <option value="">Select a service</option>
+                        <option value="mushroom-cultivation">Mushroom Cultivation Setup</option>
+                        <option value="precision-farming">Precision Farming Consultation</option>
+                        <option value="equipment-rental">Equipment Rental</option>
+                        <option value="soil-monitoring">Soil Health Monitoring</option>
+                        <option value="hydroponics">Hydroponics Installation</option>
+                        <option value="products">Product Orders</option>
+                        <option value="partnership">Partnership Opportunities</option>
+                      </select>
                     </div>
+
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        Last Name *
+                        Message *
                       </label>
-                      <Input placeholder="Enter your last name" />
+                      <Textarea name="message" placeholder="Tell us about your project..." rows={5} required />
                     </div>
-                  </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        Email Address *
-                      </label>
-                      <Input type="email" placeholder="your@email.com" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        Phone Number
-                      </label>
-                      <Input placeholder="+91 XXX-XXX-XXXX" />
-                    </div>
-                  </div>
+                    <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90" size="lg">
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </Button>
+                  </form>
 
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Service Interest
-                    </label>
-                    <select className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
-                      <option value="">Select a service</option>
-                      <option value="mushroom-cultivation">Mushroom Cultivation Setup</option>
-                      <option value="precision-farming">Precision Farming Consultation</option>
-                      <option value="equipment-rental">Equipment Rental</option>
-                      <option value="soil-monitoring">Soil Health Monitoring</option>
-                      <option value="hydroponics">Hydroponics Installation</option>
-                      <option value="products">Product Orders</option>
-                      <option value="partnership">Partnership Opportunities</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Message *
-                    </label>
-                    <Textarea 
-                      placeholder="Tell us about your project, requirements, or questions..."
-                      rows={5}
-                    />
-                  </div>
-
-                  <Button className="w-full bg-gradient-primary hover:opacity-90" size="lg">
-                    <Send className="w-5 h-5 mr-2" />
-                    Send Message
-                  </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
                     By submitting this form, you agree to our privacy policy and terms of service.
