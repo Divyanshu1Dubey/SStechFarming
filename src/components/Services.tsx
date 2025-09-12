@@ -11,44 +11,71 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import precisionFarmingImage from "@/assets/precision-farming.jpg";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       icon: Microscope,
-      title: "Mushroom Spawn Labs",
-      description: "State-of-the-art spawn production facilities for white button mushrooms with controlled sterile environments.",
-      features: ["Sterile cultivation environments", "Quality spawn production", "Research & development"]
+      title: t("services_page.spawn_labs_title"),
+      description: t("services_page.spawn_labs_description"),
+      features: [
+        t("services_page.spawn_labs_feature1"),
+        t("services_page.spawn_labs_feature2"),
+        t("services_page.spawn_labs_feature3"),
+      ]
     },
     {
       icon: Factory,
-      title: "Indoor Composting Units", 
-      description: "Advanced composting systems that convert organic waste into premium growing medium for mushroom cultivation.",
-      features: ["Automated composting process", "Organic fertilizer production", "Waste-to-value conversion"]
+      title: t("services_page.composting_title"), 
+      description: t("services_page.composting_description"),
+      features: [
+        t("services_page.composting_feature1"),
+        t("services_page.composting_feature2"),
+        t("services_page.composting_feature3"),
+      ]
     },
     {
       icon: Building,
-      title: "Controlled Atmosphere Farming",
-      description: "Commercial mushroom farming facilities with precise environmental control for optimal yields.",
-      features: ["Climate-controlled growing", "Maximum yield optimization", "Year-round production"]
+      title: t("services_page.farming_title"),
+      description: t("services_page.farming_description"),
+      features: [
+        t("services_page.farming_feature1"),
+        t("services_page.farming_feature2"),
+        t("services_page.farming_feature3"),
+      ]
     },
     {
       icon: Settings,
-      title: "Equipment Rental",
-      description: "Comprehensive plant and machinery rental services tailored to regional agricultural needs.",
-      features: ["Regional equipment availability", "Maintenance support", "Flexible rental terms"]
+      title: t("services_page.rental_title"),
+      description: t("services_page.rental_description"),
+      features: [
+        t("services_page.rental_feature1"),
+        t("services_page.rental_feature2"),
+        t("services_page.rental_feature3"),
+      ]
     },
     {
       icon: Droplets,
-      title: "Precision Farming Solutions",
-      description: "Advanced hydroponics, polyhouse setup, and drip irrigation systems for modern agriculture.",
-      features: ["Hydroponic systems", "Polyhouse construction", "Drip irrigation setup"]
+      title: t("services_page.solutions_title"),
+      description: t("services_page.solutions_description"),
+      features: [
+        t("services_page.solutions_feature1"),
+        t("services_page.solutions_feature2"),
+        t("services_page.solutions_feature3"),
+      ]
     },
     {
       icon: BarChart3,
-      title: "Soil Health Monitoring",
-      description: "Comprehensive soil analysis and monitoring systems including NPK levels, pH, and weather stations.",
-      features: ["NPK monitoring", "Soil pH analysis", "Weather station setup"]
+      title: t("services_page.monitoring_title"),
+      description: t("services_page.monitoring_description"),
+      features: [
+        t("services_page.monitoring_feature1"),
+        t("services_page.monitoring_feature2"),
+        t("services_page.monitoring_feature3"),
+      ]
     }
   ];
 
@@ -59,11 +86,10 @@ const Services = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Our Services
+              {t("services_page.header")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive agritech solutions covering the entire mushroom value chain 
-              and precision farming technologies across India.
+              {t("services_page.subheader")}
             </p>
           </div>
 
@@ -97,35 +123,33 @@ const Services = () => {
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h3 className="text-3xl font-bold mb-6 text-foreground">
-                  Consulting & Technology Setup
+                  {t("services_page.consulting_title")}
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Our expert consulting services help you establish complete agricultural 
-                  technology solutions. From mushroom plant setup to precision farming 
-                  infrastructure, we provide end-to-end support for modern agricultural ventures.
+                  {t("services_page.consulting_description")}
                 </p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center">
                     <Thermometer className="w-5 h-5 text-agri-primary mr-3" />
-                    <span className="text-sm">Climate Control Systems</span>
+                    <span className="text-sm">{t("services_page.consulting_feature1")}</span>
                   </div>
                   <div className="flex items-center">
                     <BarChart3 className="w-5 h-5 text-agri-primary mr-3" />
-                    <span className="text-sm">IoT Monitoring Solutions</span>
+                    <span className="text-sm">{t("services_page.consulting_feature2")}</span>
                   </div>
                   <div className="flex items-center">
                     <Droplets className="w-5 h-5 text-agri-primary mr-3" />
-                    <span className="text-sm">Water Management</span>
+                    <span className="text-sm">{t("services_page.consulting_feature3")}</span>
                   </div>
                   <div className="flex items-center">
                     <Settings className="w-5 h-5 text-agri-primary mr-3" />
-                    <span className="text-sm">Automation Systems</span>
+                    <span className="text-sm">{t("services_page.consulting_feature4")}</span>
                   </div>
                 </div>
 
                 <Button className="bg-gradient-primary hover:opacity-90">
-                  Schedule Consultation
+                  {t("services_page.schedule_consultation")}
                 </Button>
               </div>
 

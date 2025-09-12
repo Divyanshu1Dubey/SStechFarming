@@ -3,44 +3,47 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Headquarters",
-      details: "Bokaro, Jharkhand, Bharat",
-      description: "Innovation Hub & Research Center"
+      title: t("contact.headquarters"),
+      details: t("contact.headquarters_location"),
+      description: t("contact.headquarters_description")
     },
     {
       icon: Phone,
-      title: "Phone",
-      details: "+91 79923 38119",
-      description: "Business Hours Support"
+      title: t("contact.phone"),
+      details: t("contact.phone_number"),
+      description: t("contact.phone_description")
     },
     {
       icon: Mail,
-      title: "Email",
-      details: "info@sstechfarmingindia.com",
-      description: "Quick Response Guaranteed"
+      title: t("contact.email_title"),
+      details: t("contact.email_address"),
+      description: t("contact.email_description")
     },
     {
       icon: Clock,
-      title: "Business Hours",
-      details: "Mon - Sat: 9:00 AM - 6:00 PM",
-      description: "Sunday: Emergency Support Only"
+      title: t("contact.business_hours"),
+      details: t("contact.business_hours_details"),
+      description: t("contact.business_hours_description")
     }
   ];
 
   const services = [
-    "Mushroom Cultivation Setup",
-    "Precision Farming Consultation",
-    "Equipment Rental Services",
-    "Soil Health Monitoring",
-    "Hydroponics Installation",
-    "Weather Station Setup",
-    "Bulk Product Orders",
-    "Partnership Opportunities"
+    t("contact.service1"),
+    t("contact.service2"),
+    t("contact.service3"),
+    t("contact.service4"),
+    t("contact.service5"),
+    t("contact.service6"),
+    t("contact.service7"),
+    t("contact.service8")
   ];
 
   return (
@@ -50,11 +53,10 @@ const Contact = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Get In Touch
+              {t("contact.get_in_touch")}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Ready to transform your agricultural venture? Contact our team of experts
-              for consultation, product inquiries, or partnership opportunities.
+              {t("contact.form_description")}
             </p>
           </div>
 
@@ -62,7 +64,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="lg:col-span-1 space-y-6">
               <h3 className="text-2xl font-bold mb-6 text-foreground">
-                Contact Information
+                {t("contact.contact_information")}
               </h3>
 
               {contactInfo.map((info, index) => (
@@ -85,7 +87,7 @@ const Contact = () => {
               {/* Services List */}
               <Card className="bg-gradient-primary text-white">
                 <CardHeader>
-                  <CardTitle>Our Consultation Services</CardTitle>
+                  <CardTitle>{t("contact.consultation_services_title")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
@@ -104,9 +106,9 @@ const Contact = () => {
             <div className="lg:col-span-2">
               <Card className="shadow-strong">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl">{t("contact.form_title")}</CardTitle>
                   <p className="text-muted-foreground">
-                    Fill out the form below and we'll get back to you within 24 hours.
+                    {t("contact.form_subtitle")}
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -114,65 +116,65 @@ const Contact = () => {
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
-                          First Name *
+                          {t("contact.first_name")}
                         </label>
-                        <Input name="firstName" placeholder="Enter your first name" required />
+                        <Input name="firstName" placeholder={t("contact.first_name_placeholder")} required />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
-                          Last Name *
+                          {t("contact.last_name")}
                         </label>
-                        <Input name="lastName" placeholder="Enter your last name" required />
+                        <Input name="lastName" placeholder={t("contact.last_name_placeholder")} required />
                       </div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
-                          Email Address *
+                          {t("contact.email_address_label")}
                         </label>
-                        <Input type="email" name="email" placeholder="your@email.com" required />
+                        <Input type="email" name="email" placeholder={t("contact.email_placeholder")} required />
                       </div>
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">
-                          Phone Number
+                          {t("contact.phone_number_label")}
                         </label>
-                        <Input name="phone" placeholder="+91 XXX-XXX-XXXX" />
+                        <Input name="phone" placeholder={t("contact.phone_placeholder")} />
                       </div>
                     </div>
 
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        Service Interest
+                        {t("contact.service_interest")}
                       </label>
                       <select name="service" className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-ring">
-                        <option value="">Select a service</option>
-                        <option value="mushroom-cultivation">Mushroom Cultivation Setup</option>
-                        <option value="precision-farming">Precision Farming Consultation</option>
-                        <option value="equipment-rental">Equipment Rental</option>
-                        <option value="soil-monitoring">Soil Health Monitoring</option>
-                        <option value="hydroponics">Hydroponics Installation</option>
-                        <option value="products">Product Orders</option>
-                        <option value="partnership">Partnership Opportunities</option>
+                        <option value="">{t("contact.select_service")}</option>
+                        <option value="mushroom-cultivation">{t("contact.service_option1")}</option>
+                        <option value="precision-farming">{t("contact.service_option2")}</option>
+                        <option value="equipment-rental">{t("contact.service_option3")}</option>
+                        <option value="soil-monitoring">{t("contact.service_option4")}</option>
+                        <option value="hydroponics">{t("contact.service_option5")}</option>
+                        <option value="products">{t("contact.service_option6")}</option>
+                        <option value="partnership">{t("contact.service_option7")}</option>
                       </select>
                     </div>
 
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        Message *
+                        {t("contact.message_label")}
                       </label>
-                      <Textarea name="message" placeholder="Tell us about your project..." rows={5} required />
+                      <Textarea name="message" placeholder={t("contact.message_placeholder")} rows={5} required />
                     </div>
 
                     <Button type="submit" className="w-full bg-gradient-primary hover:opacity-90" size="lg">
                       <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                      {t("contact.send_button")}
                     </Button>
                   </form>
 
 
                   <p className="text-xs text-muted-foreground text-center">
-                    By submitting this form, you agree to our privacy policy and terms of service.
+                    {t("contact.form_footer")}
                   </p>
                 </CardContent>
               </Card>

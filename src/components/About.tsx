@@ -1,27 +1,30 @@
 import { Target, Eye, Award, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
+
   const values = [
     {
       icon: Target,
-      title: "Innovation-Driven",
-      description: "Pioneering advanced agricultural technologies and sustainable farming practices across India."
+      title: t("about_page.value1_title"),
+      description: t("about_page.value1_description")
     },
     {
       icon: Eye,
-      title: "Vision-Focused", 
-      description: "Creating a nationwide network of produce centers revolutionizing the mushroom value chain."
+      title: t("about_page.value2_title"), 
+      description: t("about_page.value2_description")
     },
     {
       icon: Award,
-      title: "Quality Excellence",
-      description: "Maintaining the highest standards in mushroom cultivation, processing, and agricultural consulting."
+      title: t("about_page.value3_title"),
+      description: t("about_page.value3_description")
     },
     {
       icon: Users,
-      title: "Community Impact",
-      description: "Empowering farmers with cutting-edge technology and comprehensive support systems."
+      title: t("about_page.value4_title"),
+      description: t("about_page.value4_description")
     }
   ];
 
@@ -32,12 +35,10 @@ const About = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              About SS TechFarming
+              {t('about_page.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Based in Bokaro, Jharkhand, Bharat, we are an innovative agritech startup specializing in 
-              mushroom cultivation and precision farming technologies. Our mission is to transform 
-              Indian agriculture through sustainable, technology-driven solutions.
+              {t('about_page.description')}
             </p>
           </div>
 
@@ -45,57 +46,54 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Content */}
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-foreground">Our Vision</h3>
+              <h3 className="text-3xl font-bold mb-6 text-foreground">{t('about_page.vision_title')}</h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                To establish produce centers across India that handle the complete mushroom value chain - 
-                from spawn production and controlled atmosphere farming to value-added products and 
-                organic fertilizers. Each center will serve as a hub for agricultural innovation, 
-                offering consulting services, equipment rental, and precision farming solutions.
+                {t('about_page.vision_description')}
               </p>
               
-              <h4 className="text-xl font-semibold mb-4 text-foreground">Core Services</h4>
+              <h4 className="text-xl font-semibold mb-4 text-foreground">{t('about_page.core_services_title')}</h4>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-agri-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Mushroom spawn lab and indoor composting units
+                  {t('about_page.core_service1')}
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-agri-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Commercial farming in controlled atmosphere
+                  {t('about_page.core_service2')}
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-agri-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Plant and machinery rental services
+                  {t('about_page.core_service3')}
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-agri-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Precision farming and hydroponics consulting
+                  {t('about_page.core_service4')}
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-agri-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                  Soil health monitoring and weather stations
+                  {t('about_page.core_service5')}
                 </li>
               </ul>
             </div>
 
             {/* Right Content - Stats */}
             <div className="bg-gradient-primary rounded-2xl p-8 text-white shadow-strong">
-              <h3 className="text-2xl font-bold mb-6">Our Impact</h3>
+              <h3 className="text-2xl font-bold mb-6">{t('about_page.impact_title')}</h3>
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
-                  <span>Farmers Supported</span>
+                  <span>{t('about_page.impact_stat1')}</span>
                   <span className="text-2xl font-bold">500+</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>Planned Centers</span>
+                  <span>{t('about_page.impact_stat2')}</span>
                   <span className="text-2xl font-bold">50+</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>Mushroom Varieties</span>
+                  <span>{t('about_page.impact_stat3')}</span>
                   <span className="text-2xl font-bold">5+</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>States Coverage</span>
+                  <span>{t('about_page.impact_stat4')}</span>
                   <span className="text-2xl font-bold">28</span>
                 </div>
               </div>

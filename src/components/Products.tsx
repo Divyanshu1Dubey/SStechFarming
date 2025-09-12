@@ -4,44 +4,56 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import mushroomProductsImage from "@/assets/mushroom-products.jpg";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 const Products = () => {
+  const { t } = useTranslation();
+
   const products = [
     {
       icon: Package,
-      title: "White Button Mushroom Spawn",
-      description: "High-quality spawn produced in our state-of-the-art laboratory with stringent quality controls.",
-      features: ["Laboratory tested", "AI-optimized production", "Quality guaranteed"],
-      badge: "Lab Grade"
+      title: t('products_page.oyster_title'),
+      description: t('products_page.oyster_description'),
+      features: [
+        t('products_page.oyster_feature1'),
+        t('products_page.oyster_feature2'),
+        t('products_page.oyster_feature3'),
+      ],
+      badge: t('products_page.oyster_badge')
     },
     {
       icon: Package,
-      title: "Fresh White Button Mushrooms",
-      description: "Premium quality fresh mushrooms grown in controlled environments with optimal nutrition and taste.",
-      features: ["Organic certification", "AI-monitored growth", "Premium packaging"],
-      badge: "Fresh"
+      title: t('products_page.shiitake_title'),
+      description: t('products_page.shiitake_description'),
+      features: [
+        t('products_page.shiitake_feature1'),
+        t('products_page.shiitake_feature2'),
+        t('products_page.shiitake_feature3'),
+      ],
+      badge: t('products_page.shiitake_badge')
     },
     {
       icon: ShoppingCart,
-      title: "Canned Mushroom Products",
-      description: "Processed and preserved mushroom products with extended shelf life for commercial and retail markets.",
-      features: ["Data-driven processing", "AI quality control", "Bulk options"],
-      badge: "Processed"
+      title: t('products_page.lions_mane_title'),
+      description: t('products_page.lions_mane_description'),
+      features: [
+        t('products_page.lions_mane_feature1'),
+        t('products_page.lions_mane_feature2'),
+        t('products_page.lions_mane_feature3'),
+      ],
+      badge: t('products_page.lions_mane_badge')
     },
     {
       icon: Recycle,
-      title: "Organic Fertilizer",
-      description: "High-quality organic fertilizer made from used mushroom compost, rich in nutrients for soil health.",
-      features: ["Algorithm-optimized NPK", "AI soil analysis", "Quality algorithms"],
-      badge: "Eco-Friendly"
+      title: t('products_page.fertilizer_title'),
+      description: t('products_page.fertilizer_description'),
+      features: [
+        t('products_page.fertilizer_feature1'),
+        t('products_page.fertilizer_feature2'),
+        t('products_page.fertilizer_feature3'),
+      ],
+      badge: t('products_page.fertilizer_badge')
     },
-    {
-      icon: Award,
-      title: "Value-Added Products",
-      description: "Innovative mushroom-based food products including powders, extracts, and specialty preparations.",
-      features: ["AI-driven formulations", "Data-optimized nutrition", "Custom algorithms"],
-      badge: "Premium"
-    }
   ];
 
   return (
@@ -51,11 +63,10 @@ const Products = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Our Products
+              {t('products_page.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              From fresh mushrooms to organic fertilizers, we offer a complete range 
-              of high-quality products derived from our sustainable cultivation practices.
+              {t('products_page.subtitle')}
             </p>
           </div>
 
@@ -64,30 +75,28 @@ const Products = () => {
             <div className="grid lg:grid-cols-2">
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <Badge className="w-fit mb-4 bg-agri-primary text-white">
-                  Featured Products
+                  {t('products_page.featured_products')}
                 </Badge>
                 <h3 className="text-3xl font-bold mb-6 text-foreground">
-                  Complete Mushroom Value Chain
+                  {t('products_page.value_chain_title')}
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Experience the full spectrum of our mushroom cultivation expertise. 
-                  From spawn to finished products, we maintain the highest quality 
-                  standards throughout the entire production process.
+                  {t('products_page.value_chain_description')}
                 </p>
                 
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                   <div className="bg-agri-growth/30 rounded-lg p-4">
-                    <div className="font-semibold text-agri-soil mb-1">Daily Production</div>
+                    <div className="font-semibold text-agri-soil mb-1">{t('products_page.production_stat')}</div>
                     <div className="text-2xl font-bold text-agri-primary">500+ kg</div>
                   </div>
                   <div className="bg-agri-growth/30 rounded-lg p-4">
-                    <div className="font-semibold text-agri-soil mb-1">Quality Grade</div>
+                    <div className="font-semibold text-agri-soil mb-1">{t('products_page.quality_stat')}</div>
                     <div className="text-2xl font-bold text-agri-primary">Grade A+</div>
                   </div>
                 </div>
                  <Link to="/products">
                 <Button className="w-fit bg-gradient-primary hover:opacity-90">
-                  View Product Catalog
+                  {t('products_page.view_all')}
                 </Button>
                  </Link>
               </div>
@@ -139,11 +148,10 @@ const Products = () => {
           {/* CTA Section */}
           <div className="text-center bg-gradient-primary rounded-2xl p-8 md:p-12 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Experience Premium Quality?
+              {t('products_page.cta_title')}
             </h3>
             <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-              Get in touch with our team to discuss bulk orders, custom packaging, 
-              or distribution partnerships. We're here to meet your specific requirements.
+              {t('products_page.cta_description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -151,13 +159,13 @@ const Products = () => {
                 size="lg" 
                 className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
               >
-                Request Quote
+                {t('products_page.cta_quote')}
               </Button>
               <Button 
                 size="lg" 
                 className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
               >
-                Download Catalog
+                {t('products_page.cta_catalog')}
               </Button>
             </div>
           </div>

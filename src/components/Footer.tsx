@@ -1,38 +1,41 @@
 import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   const footerLinks = {
     services: [
-      "Mushroom Spawn Labs",
-      "Indoor Composting",
-      "Precision Farming",
-      "Equipment Rental",
-      "Soil Monitoring",
-      "Consulting Services"
+      t('footer.services_link1'),
+      t('footer.services_link2'),
+      t('footer.services_link3'),
+      t('footer.services_link4'),
+      t('footer.services_link5'),
+      t('footer.services_link6')
     ],
     products: [
-      "Fresh Mushrooms",
-      "Canned Products",
-      "Organic Fertilizer",
-      "Value-Added Items",
-      "Bulk Orders",
-      "Custom Packaging"
+      t('footer.products_link1'),
+      t('footer.products_link2'),
+      t('footer.products_link3'),
+      t('footer.products_link4'),
+      t('footer.products_link5'),
+      t('footer.products_link6')
     ],
     company: [
-      "About Us",
-      "Our Vision",
-      "Career Opportunities",
-      "Research & Development",
-      "Quality Standards",
-      "Sustainability"
+      t('footer.company_link1'),
+      t('footer.company_link2'),
+      t('footer.company_link3'),
+      t('footer.company_link4'),
+      t('footer.company_link5'),
+      t('footer.company_link6')
     ]
   };
 
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" }
+    { icon: Facebook, href: "#", label: t('footer.social_label_facebook') },
+    { icon: Twitter, href: "#", label: t('footer.social_label_twitter') },
+    { icon: Linkedin, href: "#", label: t('footer.social_label_linkedin') },
+    { icon: Instagram, href: "#", label: t('footer.social_label_instagram') }
   ];
 
   return (
@@ -50,30 +53,28 @@ const Footer = () => {
                   className="w-12 h-12 object-contain"
                 />
                 <div>
-                  <h1 className="text-xl font-bold">SS TechFarming India</h1>
-                  <p className="text-sm text-white/70">Farm Smarter</p>
+                  <h1 className="text-xl font-bold">{t('footer.company_name')}</h1>
+                  <p className="text-sm text-white/70">{t('footer.company_subtitle')}</p>
                 </div>
               </div>
               
               <p className="text-white/80 mb-6 leading-relaxed">
-                Revolutionizing Indian agriculture through innovative mushroom cultivation, 
-                precision farming technologies, and sustainable agricultural solutions. 
-                Building a nationwide network of produce centers for the future of farming.
+                {t('footer.company_description')}
               </p>
 
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">Bokaro, Jharkhand, Bharat</span>
+                  <span className="text-sm">{t('footer.location')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">+91 79923 38119</span>
+                  <span className="text-sm">{t('footer.phone')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-4 h-4 text-agri-secondary flex-shrink-0" />
-                  <span className="text-sm">info@sstechfarmingindia.com</span>
+                  <span className="text-sm">{t('footer.email')}</span>
                 </div>
               </div>
 
@@ -94,7 +95,7 @@ const Footer = () => {
 
             {/* Services Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Services</h3>
+              <h3 className="text-lg font-semibold mb-6">{t('footer.services_title')}</h3>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
@@ -108,7 +109,7 @@ const Footer = () => {
 
             {/* Products Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Products</h3>
+              <h3 className="text-lg font-semibold mb-6">{t('footer.products_title')}</h3>
               <ul className="space-y-3">
                 {footerLinks.products.map((link, index) => (
                   <li key={index}>
@@ -122,7 +123,7 @@ const Footer = () => {
 
             {/* Company Links */}
             <div>
-              <h3 className="text-lg font-semibold mb-6">Company</h3>
+              <h3 className="text-lg font-semibold mb-6">{t('footer.company_title')}</h3>
               <ul className="space-y-3">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
@@ -140,18 +141,18 @@ const Footer = () => {
         <div className="border-t border-white/10 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-white/70">
-              © 2024 SS TechFarming India Private Limited. All rights reserved.
+              {t('footer.copyright')}
             </div>
             
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200">
-                Privacy Policy
+                {t('footer.privacy_policy')}
               </a>
               <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200">
-                Terms of Service
+                {t('footer.terms_of_service')}
               </a>
               <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200">
-                Cookie Policy
+                {t('footer.cookie_policy')}
               </a>
             </div>
           </div>
