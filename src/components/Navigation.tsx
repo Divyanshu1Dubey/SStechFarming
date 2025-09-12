@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 const Navigation = () => {
   const { t, i18n } = useTranslation();
@@ -10,14 +11,15 @@ const Navigation = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem("preferredLanguage", lng);
   };
 
   const navItems = [
-    { to: "/", label: t('navigation.home') },
-    { to: "/about", label: t('navigation.about') },
-    { to: "/services", label: t('navigation.services') },
-    { to: "/products", label: t('navigation.products') },
-    { to: "/contact", label: t('navigation.contact') },
+    { to: "/", label: t("navigation.home") },
+    { to: "/about", label: t("navigation.about") },
+    { to: "/services", label: t("navigation.services") },
+    { to: "/products", label: t("navigation.products") },
+    { to: "/contact", label: t("navigation.contact") },
   ];
 
   return (
@@ -25,17 +27,22 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/8dedc6fe-2fb9-4f3a-9de6-ae8978d311d3.png" 
-              alt="SS TechFarming Logo" 
-              className="w-12 h-12 object-contain"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-foreground">SS TechFarming India</h1>
-              <p className="text-xs text-muted-foreground">Farm Smarter</p>
-            </div>
-          </div>
+          <div className="flex items-center space-x-4">
+  <img
+    src="/lovable-uploads/8dedc6fe-2fb9-4f3a-9de6-ae8978d311d3.png"
+    alt="SS TechFarming Logo"
+    className="w-20 h-20 md:w-24 md:h-24 object-contain"
+  />
+  <div>
+    <h1 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+      SS TechFarming India
+    </h1>
+    <p className="text-sm md:text-base text-muted-foreground">
+      Farm Smarter
+    </p>
+  </div>
+</div>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -48,13 +55,25 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <div className="flex items-center space-x-2">
-              <Button variant="ghost" size="sm" onClick={() => changeLanguage('en')}>EN</Button>
-              <Button variant="ghost" size="sm" onClick={() => changeLanguage('hi')}>HI</Button>
-            </div>
+
+            {/* Language Switcher (Dropdown) */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="flex items-center space-x-1">
+                  <Globe className="w-4 h-4" />
+                  <span className="uppercase">{i18n.language}</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage("hi")}>हिंदी</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage("bn")}>বাংলা</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link to="/get-started">
               <Button variant="default" className="bg-gradient-primary hover:opacity-90">
-                {t('navigation.get_started')}
+                {t("navigation.get_started")}
               </Button>
             </Link>
           </div>
@@ -85,16 +104,30 @@ const Navigation = () => {
                   {item.label}
                 </Link>
               ))}
+
               <div className="px-3 py-2">
                 <Link to="/get-started">
                   <Button variant="default" className="w-full bg-gradient-primary">
-                    {t('navigation.get_started')}
+                    {t("navigation.get_started")}
                   </Button>
                 </Link>
               </div>
-               <div className="flex items-center space-x-2 px-3 py-2">
-                <Button variant="ghost" size="sm" onClick={() => changeLanguage('en')}>EN</Button>
-                <Button variant="ghost" size="sm" onClick={() => changeLanguage('hi')}>HI</Button>
+
+              {/* Mobile Language Switcher (Dropdown) */}
+              <div className="px-3 py-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <Button variant="outline" className="w-full justify-between">
+                      <Globe className="w-4 h-4 mr-2" />
+                      <span className="uppercase">{i18n.language}</span>
+                    </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="w-full">
+                    <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => changeLanguage("hi")}>हिंदी</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => changeLanguage("bn")}>বাংলা</DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
             </div>
           </div>
