@@ -23,26 +23,25 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+    <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 h-20 flex items-center">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-  <img
-    src="/lovable-uploads/8dedc6fe-2fb9-4f3a-9de6-ae8978d311d3.png"
-    alt="SS TechFarming Logo"
-    className="w-20 h-20 md:w-24 md:h-24 object-contain"
-  />
-  <div>
-    <h1 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
-      SS TechFarming India
-    </h1>
-    <p className="text-sm md:text-base text-muted-foreground">
-      Farm Smarter
-    </p>
-  </div>
-</div>
-
+            <img
+              src="/lovable-uploads/8dedc6fe-2fb9-4f3a-9de6-ae8978d311d3.png"
+              alt="SS TechFarming Logo"
+              className="w-20 h-20 md:w-24 md:h-24 object-contain"
+            />
+            <div>
+              <h1 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                SS TechFarming India
+              </h1>
+              <p className="text-sm md:text-base text-muted-foreground">
+                Farm Smarter
+              </p>
+            </div>
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -59,15 +58,15 @@ const Navigation = () => {
             {/* Language Switcher (Dropdown) */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="flex items-center space-x-1">
+                <Button variant="ghost" size="sm" className="flex items-center ">
                   <Globe className="w-4 h-4" />
                   <span className="uppercase">{i18n.language}</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage("hi")}>हिंदी</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage("bn")}>বাংলা</DropdownMenuItem>
+                <DropdownMenuItem className="hover:cursor-pointer" onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
+                <DropdownMenuItem className="hover:cursor-pointer" onClick={() => changeLanguage("hi")}>हिंदी</DropdownMenuItem>
+                <DropdownMenuItem className="hover:cursor-pointer" onClick={() => changeLanguage("bn")}>বাংলা</DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 

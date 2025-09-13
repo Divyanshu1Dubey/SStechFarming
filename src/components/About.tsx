@@ -94,7 +94,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <span>{t('about_page.impact_stat4')}</span>
-                  <span className="text-2xl font-bold">28</span>
+                  <span className="text-2xl font-bold">7</span>
                 </div>
               </div>
             </div>

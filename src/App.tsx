@@ -41,9 +41,7 @@ const App = () => {
     i18n.changeLanguage(lang);
 
     // ✅ Save to cookie for 1 year
-    document.cookie = `preferredLanguage=${lang}; path=/; max-age=${
-      60 * 60 * 24 * 365
-    }`;
+    document.cookie = `preferredLanguage=${lang}; path=/; max-age=${60 * 60 * 24 * 365}`;
 
     setShowModal(false);
   };
