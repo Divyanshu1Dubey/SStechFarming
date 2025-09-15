@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import precisionFarmingImage from "@/assets/precision-farming.jpg";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const { t } = useTranslation();
@@ -147,10 +148,11 @@ const Services = () => {
                     <span className="text-sm">{t("services_page.consulting_feature4")}</span>
                   </div>
                 </div>
-
+                <Link to="/contact">
                 <Button className="bg-gradient-primary hover:opacity-90">
                   {t("services_page.schedule_consultation")}
                 </Button>
+                </Link>
               </div>
 
               <div className="relative">

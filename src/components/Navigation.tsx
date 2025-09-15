@@ -70,7 +70,7 @@ const Navigation = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link to="/get-started">
+            <Link to="/contact">
               <Button variant="default" className="bg-gradient-primary hover:opacity-90">
                 {t("navigation.get_started")}
               </Button>

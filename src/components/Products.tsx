@@ -83,7 +83,7 @@ const Products = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {t('products_page.value_chain_description')}
                 </p>
-                
+
                 <div className="grid sm:grid-cols-2 gap-4 mb-8">
                   <div className="bg-agri-growth/30 rounded-lg p-4">
                     <div className="font-semibold text-agri-soil mb-1">{t('products_page.production_stat')}</div>
@@ -94,17 +94,17 @@ const Products = () => {
                     <div className="text-2xl font-bold text-agri-primary">Grade A+</div>
                   </div>
                 </div>
-                 <Link to="/products">
-                <Button className="w-fit bg-gradient-primary hover:opacity-90">
-                  {t('products_page.view_all')}
-                </Button>
-                 </Link>
+                <Link to="/products">
+                  <Button className="w-fit bg-gradient-primary hover:opacity-90">
+                    {t('products_page.view_all')}
+                  </Button>
+                </Link>
               </div>
 
               <div className="relative min-h-[300px]">
-                <img 
-                  src={mushroomProductsImage} 
-                  alt="Mushroom Products" 
+                <img
+                  src={mushroomProductsImage}
+                  alt="Mushroom Products"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-agri-primary/10"></div>
@@ -121,8 +121,8 @@ const Products = () => {
                     <div className="w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <product.icon className="w-8 h-8 text-white" />
                     </div>
-                    <Badge 
-                      variant="secondary" 
+                    <Badge
+                      variant="secondary"
                       className="absolute -top-2 -right-2 bg-agri-secondary text-white"
                     >
                       {product.badge}
@@ -154,19 +154,21 @@ const Products = () => {
               {t('products_page.cta_description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="secondary" 
-                size="lg" 
+              <Button
+                variant="secondary"
+                size="lg"
                 className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
               >
                 {t('products_page.cta_quote')}
               </Button>
-              <Button 
-                size="lg" 
-                className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
-              >
-                {t('products_page.cta_catalog')}
-              </Button>
+              <a href="/catalog.pdf" download>
+                <Button
+                  size="lg"
+                  className="bg-white text-agri-primary hover:bg-white transform transition-transform duration-300 hover:scale-105"
+                >
+                  {t('products_page.cta_catalog')}
+                </Button>
+              </a>
             </div>
           </div>
         </div>
