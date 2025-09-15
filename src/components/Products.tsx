@@ -12,7 +12,7 @@ const Products = () => {
   const products = [
     {
       icon: Package,
-      title: t('products_page.oyster_title'),
+      title: t('products_page.product1_title'),
       description: t('products_page.oyster_description'),
       features: [
         t('products_page.oyster_feature1'),
