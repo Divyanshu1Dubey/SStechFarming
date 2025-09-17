@@ -146,7 +146,7 @@
     "title": "About Our Mushroom Farm",
     "description": "We are dedicated to providing the freshest, highest-quality mushrooms to our customers. Our state-of-the-art farm and sustainable growing practices ensure that you receive a superior product every time. Learn more about our commitment to excellence and the passion that drives us.",
     "vision_title": "Our Vision",
-    "vision_description": "To establish produce centers across India that handle the complete mushroom value chain - from spawn production and controlled atmosphere farming to value-added products and organic fertilizers. Each center will serve as a hub for agricultural innovation, offering consulting services, equipment rental, and precision farming solutions.",
+    "vision_description": "To establish produce centers across India that cover the full value chain — from seed and spawn to farming, value-added products, and fertilizers — all powered by a single AI-driven platform. Each hub will drive agricultural innovation with consulting, equipment rental, precision farming, marketplace services, and real-time insights to help farmers and partners grow sustainably and profitably.",
     "core_services_title": "Core Services",
     "core_service1": "Mushroom spawn lab and indoor composting units",
     "core_service2": "Commercial farming in controlled atmosphere",
@@ -161,7 +161,7 @@
     "value1_title": "Innovation-Driven",
     "value1_description": "Pioneering advanced agricultural technologies and sustainable farming practices across India.",
     "value2_title": "Vision-Focused",
-    "value2_description": "Creating a nationwide network of produce centers revolutionizing the mushroom value chain.",
+    "value2_description": "Creating a nationwide network of AI-driven produce centers revolutionizing agriculture from farm to marketplace.",
     "value3_title": "Quality Excellence",
     "value3_description": "Maintaining the highest standards in mushroom cultivation, processing, and agricultural consulting.",
     "value4_title": "Community Impact",
@@ -241,5 +241,22 @@
     "social_label_twitter": "Twitter",
     "social_label_linkedin": "LinkedIn",
     "social_label_instagram": "Instagram"
+  },
+ "careers": {
+    "title": "Career Opportunities",
+    "description": "Join our mission to revolutionize agriculture with AI-powered solutions. Explore roles in research, technology, farming, and operations."
+  },
+  "research": {
+    "title": "Research & Development",
+    "description": "Our R&D team drives innovation in controlled-environment farming, sustainable practices, and AI-driven agricultural insights."
+  },
+  "quality": {
+    "title": "Quality Standards",
+    "description": "We follow strict quality protocols to ensure the highest standards in spawn, produce, and value-added products."
+  },
+  "sustainability": {
+    "title": "Sustainability",
+    "description": "Sustainability is at the core of our work. From organic fertilizers to circular farming practices, we help build a greener future."
   }
 }
+

@@ -26,9 +26,10 @@ const Hero = () => {
             {t('hero.title')}
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            {t('hero.subtitle')}
-          </p>
+          <p className="text-xl md:text-2xl mb-8 text-black max-w-3xl mx-auto leading-relaxed">
+  {t('hero.subtitle')}
+</p>
+
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/services">
@@ -58,11 +59,11 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 mb-10">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">500+</div>
+              <div className="text-3xl font-bold mb-2">200+</div>
               <div className="text-sm text-white/80">{t('hero.farmers_empowered')}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold mb-2">50+</div>
+              <div className="text-3xl font-bold mb-2">25+</div>
               <div className="text-sm text-white/80">{t('hero.produce_centers_planned')}</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

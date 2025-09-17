@@ -82,11 +82,11 @@ const About = () => {
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <span>{t('about_page.impact_stat1')}</span>
-                  <span className="text-2xl font-bold">500+</span>
+                  <span className="text-2xl font-bold">200+</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>{t('about_page.impact_stat2')}</span>
-                  <span className="text-2xl font-bold">50+</span>
+                  <span className="text-2xl font-bold">25+</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span>{t('about_page.impact_stat3')}</span>
@@ -94,7 +94,7 @@ const About = () => {
                 </div>
                 <div className="flex items-center justify-between">
                   <span>{t('about_page.impact_stat4')}</span>
-                  <span className="text-2xl font-bold">7</span>
+                  <span className="text-2xl font-bold">7+</span>
                 </div>
               </div>
             </div>
