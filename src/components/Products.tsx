@@ -54,8 +54,52 @@ const Products = () => {
       ],
       badge: t('products_page.fertilizer_badge')
     },
+    {
+      icon: Recycle,
+      title: t('products_page.fertilizer_title'),
+      description: t('products_page.fertilizer_description'),
+      features: [
+        t('products_page.fertilizer_feature1'),
+        t('products_page.fertilizer_feature2'),
+        t('products_page.fertilizer_feature3'),
+      ],
+      badge: t('products_page.fertilizer_badge')
+    },
+    {
+      icon: Recycle,
+      title: t('products_page.fertilizer_title'),
+      description: t('products_page.fertilizer_description'),
+      features: [
+        t('products_page.fertilizer_feature1'),
+        t('products_page.fertilizer_feature2'),
+        t('products_page.fertilizer_feature3'),
+      ],
+      badge: t('products_page.fertilizer_badge')
+    },
+    {
+      icon: Recycle,
+      title: t('products_page.fertilizer_title'),
+      description: t('products_page.fertilizer_description'),
+      features: [
+        t('products_page.fertilizer_feature1'),
+        t('products_page.fertilizer_feature2'),
+        t('products_page.fertilizer_feature3'),
+      ],
+      badge: t('products_page.fertilizer_badge')
+    },
+    {
+      icon: Recycle,
+      title: t('products_page.fertilizer_title'),
+      description: t('products_page.fertilizer_description'),
+      features: [
+        t('products_page.fertilizer_feature1'),
+        t('products_page.fertilizer_feature2'),
+        t('products_page.fertilizer_feature3'),
+      ],
+      badge: t('products_page.fertilizer_badge')
+    },
   ];
-
+  
   return (
     <section id="products" className="py-20 bg-gradient-to-b from-agri-growth/10 to-background shadow-[inset_0_100px_200px_-100px_rgba(44,165,17,0.5)]">
       <div className="container mx-auto px-4">
