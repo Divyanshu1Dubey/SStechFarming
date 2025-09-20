@@ -53,51 +53,7 @@ const Products = () => {
         t('products_page.fertilizer_feature3'),
       ],
       badge: t('products_page.fertilizer_badge')
-    },
-    {
-      icon: Recycle,
-      title: t('products_page.fertilizer_title'),
-      description: t('products_page.fertilizer_description'),
-      features: [
-        t('products_page.fertilizer_feature1'),
-        t('products_page.fertilizer_feature2'),
-        t('products_page.fertilizer_feature3'),
-      ],
-      badge: t('products_page.fertilizer_badge')
-    },
-    {
-      icon: Recycle,
-      title: t('products_page.fertilizer_title'),
-      description: t('products_page.fertilizer_description'),
-      features: [
-        t('products_page.fertilizer_feature1'),
-        t('products_page.fertilizer_feature2'),
-        t('products_page.fertilizer_feature3'),
-      ],
-      badge: t('products_page.fertilizer_badge')
-    },
-    {
-      icon: Recycle,
-      title: t('products_page.fertilizer_title'),
-      description: t('products_page.fertilizer_description'),
-      features: [
-        t('products_page.fertilizer_feature1'),
-        t('products_page.fertilizer_feature2'),
-        t('products_page.fertilizer_feature3'),
-      ],
-      badge: t('products_page.fertilizer_badge')
-    },
-    {
-      icon: Recycle,
-      title: t('products_page.fertilizer_title'),
-      description: t('products_page.fertilizer_description'),
-      features: [
-        t('products_page.fertilizer_feature1'),
-        t('products_page.fertilizer_feature2'),
-        t('products_page.fertilizer_feature3'),
-      ],
-      badge: t('products_page.fertilizer_badge')
-    },
+    }
   ];
   
   return (

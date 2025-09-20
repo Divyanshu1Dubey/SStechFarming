@@ -12,7 +12,11 @@ import Products from "@/components/Products";
 import Contact from "@/components/Contact";
 import Layout from "@/components/Layout";
 import LanguageModal from "@/components/LanguageModal";
+import Career from "./components/CareerOpportunities";
+import Research from "./components/Research&Development";
+import Quality from "./components/Quality";
 import { useTranslation } from "react-i18next";
+import Sustainability from "./components/Sustainability";
 
 const queryClient = new QueryClient();
 
@@ -93,6 +97,38 @@ const App = () => {
               element={
                 <Layout>
                   <Contact />
+                </Layout>
+              }
+            />
+            <Route
+              path="/Career"
+              element={
+                <Layout>
+                  <Career />
+                </Layout>
+              }
+            />
+            <Route
+              path="/research"
+              element={
+                <Layout>
+                  <Research />
+                </Layout>
+              }
+            />
+            <Route
+              path="/quality"
+              element={
+                <Layout>
+                  <Quality />
+                </Layout>
+              }
+            />
+            <Route
+              path="/sustainability"
+              element={
+                <Layout>
+                  <Sustainability />
                 </Layout>
               }
             />

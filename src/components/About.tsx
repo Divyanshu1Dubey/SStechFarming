@@ -101,7 +101,7 @@ const About = () => {
           </div>
 
           {/* new section */}
-          <div className="bg-gradient-primary w-[90vw] backdrop-blur-sm rounded-lg p-10 mt-16 mb-16 text-left">
+          <div className="bg-gradient-primary backdrop-blur-sm rounded-2xl p-10 mt-16 mb-16 text-left">
             <h2 className="text-4xl font-bold mb-6 text-white text-center">{t('hero.future_of_agriculture')}</h2>
             <p className="text-lg mb-8 text-white max-w-4xl mx-auto leading-relaxed text-center">
               {t('hero.mission_description')}

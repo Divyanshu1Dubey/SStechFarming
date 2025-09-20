@@ -20,16 +20,17 @@ const Footer = () => {
       t('footer.products_link4'),
       t('footer.products_link5'),
       t('footer.products_link6')
-    ],
-    company: [
-      t('footer.company_link1'),
-      t('footer.company_link2'),
-      t('footer.company_link3'),
-      t('footer.company_link4'),
-      t('footer.company_link5'),
-      t('footer.company_link6')
     ]
   };
+
+  const company =[
+    {href:"/about", label: t('footer.company_link1')},
+    {href:"#", label: t('footer.company_link2')},
+    {href:"/career", label: t('footer.company_link3')},
+    {href:"/research", label: t('footer.company_link4')},
+    {href:"/quality", label: t('footer.company_link5')},
+    {href:"/sustainability", label: t('footer.company_link6')}
+  ]
 
   const socialLinks = [
     { icon: Facebook, href: "#", label: t('footer.social_label_facebook') },
@@ -124,15 +125,17 @@ const Footer = () => {
             {/* Company Links */}
             <div>
               <h3 className="text-lg font-semibold mb-6">{t('footer.company_title')}</h3>
-              <ul className="space-y-3">
-                {footerLinks.company.map((link, index) => (
-                  <li key={index}>
-                    <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm">
-                      {link}
-                    </a>
-                  </li>
+              <div className="flex flex-col space-y-4">
+                {company.map((company, index) => (
+                  <a
+                    key={index}
+                    href={company.href}
+                    className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm"
+                  >
+                    {company.label}
+                  </a>
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
         </div>

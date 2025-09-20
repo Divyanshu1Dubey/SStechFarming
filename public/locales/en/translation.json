@@ -273,21 +273,59 @@
     "social_label_linkedin": "LinkedIn",
     "social_label_instagram": "Instagram"
   },
- "careers": {
+   "career_page": {
     "title": "Career Opportunities",
-    "description": "Join our mission to revolutionize agriculture with AI-powered solutions. Explore roles in research, technology, farming, and operations."
+    "description": "Join our mission to revolutionize agriculture with AI-powered solutions. Explore roles in research, technology, farming, and operations.",
+    "apply_button": "Apply Now",
+    "job1_title": "Mycology Research Scientist",
+    "job1_location": "Bokaro, Jharkhand",
+    "job1_description": "Join our R&D team to drive innovation in mushroom cultivation and sustainable farming. PhD in Mycology or related field required.",
+    "job2_title": "AI & IoT Engineer",
+    "job2_location": "Remote",
+    "job2_description": "Develop and manage our AI-driven platform for precision farming. Experience with IoT, data analytics, and cloud computing is essential.",
+    "job3_title": "Farm Operations Manager",
+    "job3_location": "Bokaro, Jharkhand",
+    "job3_description": "Oversee daily operations at our flagship mushroom farm. Strong leadership and experience in controlled environment agriculture needed.",
+    "job4_title": "Marketing & Sales Executive",
+    "job4_location": "Bokaro, Jharkhand",
+    "job4_description": "Promote our innovative solutions and build strategic partnerships. Proven track record in agritech sales and marketing is a plus."
   },
-  "research": {
+
+  "research_page": {
     "title": "Research & Development",
-    "description": "Our R&D team drives innovation in controlled-environment farming, sustainable practices, and AI-driven agricultural insights."
+    "description": "Our R&D team drives innovation in controlled-environment farming, sustainable practices, and AI-driven agricultural insights.",
+    "area1_title": "Mycology and Spawn Development",
+    "area1_description": "We are constantly researching and developing new strains of mushroom spawn to improve yield, quality, and disease resistance.",
+    "area2_title": "AI-Powered Precision Farming",
+    "area2_description": "Our team is at the forefront of developing AI and IoT solutions to optimize growing conditions and automate farm management.",
+    "area3_title": "Sustainable Agriculture",
+    "area3_description": "We are committed to developing and implementing sustainable farming practices, including waste reduction and organic fertilization.",
+    "area4_title": "New Product Development",
+    "area4_description": "Our R&D extends to creating innovative value-added products from our high-quality mushrooms, from culinary delights to health supplements."
   },
-  "quality": {
-    "title": "Quality Standards",
-    "description": "We follow strict quality protocols to ensure the highest standards in spawn, produce, and value-added products."
+  "quality_page": {
+    "title": "Our Commitment to Quality",
+    "description": "From farm to table, we uphold the highest standards of quality and safety in all our products and processes. Our commitment to excellence is unwavering.",
+    "standard1_title": "Farm-to-Table Traceability",
+    "standard1_description": "We ensure complete traceability of our products, from the moment the spawn is cultivated to the final delivery. This transparency guarantees the freshness and quality of every mushroom.",
+    "standard2_title": "Sustainable and Organic Practices",
+    "standard2_description": "Our mushrooms are grown using sustainable and organic farming methods. We avoid harmful pesticides and chemicals, ensuring a natural and healthy product.",
+    "standard3_title": "Advanced Quality Control",
+    "standard3_description": "Our state-of-the-art labs and AI-powered quality control systems monitor every stage of production. This ensures that our mushrooms meet the strictest quality and safety standards.",
+    "standard4_title": "Certifications and Compliance",
+    "standard4_description": "We are proud to be certified by leading food safety and organic standards organizations. Our compliance with these standards is a testament to our commitment to quality."
   },
-  "sustainability": {
-    "title": "Sustainability",
-    "description": "Sustainability is at the core of our work. From organic fertilizers to circular farming practices, we help build a greener future."
+   "sustainability_page": {
+    "title": "Farming for a Greener Future",
+    "description": "Sustainability is at the core of our operations. We are dedicated to pioneering eco-friendly farming practices that benefit the environment and our communities.",
+    "initiative1_title": "Circular Economy and Waste Reduction",
+    "initiative1_description": "We utilize a circular economy model, where waste from one process becomes a resource for another. Our used mushroom compost is converted into high-quality organic fertilizer, reducing waste and promoting soil health.",
+    "initiative2_title": "Renewable Energy and Energy Efficiency",
+    "initiative2_description": "Our farms are designed for energy efficiency, and we are committed to transitioning to renewable energy sources. We are exploring solar and other green technologies to power our operations.",
+    "initiative3_title": "Community Empowerment and Fair Labor",
+    "initiative3_description": "We believe in empowering our local communities by providing fair-wage jobs and creating economic opportunities. We are committed to ethical labor practices and a safe, inclusive workplace.",
+    "initiative4_title": "Continuous Improvement and Innovation",
+    "initiative4_description": "We are constantly researching and implementing new ways to improve our sustainability practices. Our goal is to set new standards for eco-friendly agriculture and inspire positive change in the industry."
   }
 }
 
