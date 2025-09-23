@@ -37,7 +37,8 @@ const Services = () => {
         t("services_page.spawn_labs_feature1"),
         t("services_page.spawn_labs_feature2"),
         t("services_page.spawn_labs_feature3"),
-      ]
+      ],
+      link: "/contact"
     },
     {
       icon: Factory,
@@ -47,7 +48,8 @@ const Services = () => {
         t("services_page.composting_feature1"),
         t("services_page.composting_feature2"),
         t("services_page.composting_feature3"),
-      ]
+      ],
+      link: "/contact"
     },
     {
       icon: Building,
@@ -57,7 +59,8 @@ const Services = () => {
         t("services_page.farming_feature1"),
         t("services_page.farming_feature2"),
         t("services_page.farming_feature3"),
-      ]
+      ],
+      link: "/contact"
     },
     {
       icon: Settings,
@@ -67,7 +70,8 @@ const Services = () => {
         t("services_page.rental_feature1"),
         t("services_page.rental_feature2"),
         t("services_page.rental_feature3"),
-      ]
+      ],
+      link: "/equipment-rental"
     },
     {
       icon: Droplets,
@@ -77,7 +81,8 @@ const Services = () => {
         t("services_page.solutions_feature1"),
         t("services_page.solutions_feature2"),
         t("services_page.solutions_feature3"),
-      ]
+      ],
+      link: "/hydroponics-installation"
     },
     {
       icon: BarChart3,
@@ -87,7 +92,8 @@ const Services = () => {
         t("services_page.monitoring_feature1"),
         t("services_page.monitoring_feature2"),
         t("services_page.monitoring_feature3"),
-      ]
+      ],
+      link: "/soil-monitoring"
     }
   ];
 
@@ -130,7 +136,7 @@ const Services = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground mb-6 h-24">{service.description}</p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-base">
                         <Leaf className="w-5 h-5 text-agri-primary mr-3 flex-shrink-0" />
@@ -138,6 +144,11 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
+                  <Link to={service.link}>
+                    <Button variant="outline" className="w-full hover:bg-agri-primary hover:text-white">
+                      Learn More
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

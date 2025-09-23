@@ -1,35 +1,39 @@
 import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const { t } = useTranslation();
 
   const footerLinks = {
     services: [
-      t('footer.services_link1'),
-      t('footer.services_link2'),
-      t('footer.services_link3'),
-      t('footer.services_link4'),
-      t('footer.services_link5'),
-      t('footer.services_link6')
+      { name: t('footer.services_link1'), href: "/contact" },
+      { name: t('footer.services_link2'), href: "/contact" }, 
+      { name: t('footer.precision_farming'), href: "/consulting-services" },
+      { name: t('footer.services_link4'), href: "/equipment-rental" },
+      { name: t('footer.services_link5'), href: "/soil-monitoring" },
+      { name: t('footer.services_link6'), href: "/consulting-services" },
+      { name: t('footer.hydroponics_installation'), href: "/hydroponics-installation" }
     ],
     products: [
-      t('footer.products_link1'),
-      t('footer.products_link2'),
-      t('footer.products_link3'),
-      t('footer.products_link4'),
-      t('footer.products_link5'),
-      t('footer.products_link6')
+      { name: t('footer.products_link1'), href: "/products" },
+      { name: t('footer.products_link2'), href: "/products" },
+      { name: t('footer.products_link3'), href: "/products" },
+      { name: t('footer.products_link4'), href: "/products" },
+      { name: t('footer.products_link5'), href: "/bulk-orders" },
+      { name: t('footer.products_link6'), href: "/custom-packaging" },
+      { name: t('footer.product_catalog'), href: "/catalog" },
+      { name: t('footer.request_quote'), href: "/request-quote" }
     ]
   };
 
-  const company =[
-    {href:"/about", label: t('footer.company_link1')},
-    {href:"#", label: t('footer.company_link2')},
-    {href:"/career", label: t('footer.company_link3')},
-    {href:"/research", label: t('footer.company_link4')},
-    {href:"/quality", label: t('footer.company_link5')},
-    {href:"/sustainability", label: t('footer.company_link6')}
+  const company = [
+    { href: "/about", label: t('footer.company_link1') },
+    { href: "/our-vision", label: t('footer.company_link2') },
+    { href: "/Career", label: t('footer.company_link3') },
+    { href: "/research", label: t('footer.company_link4') },
+    { href: "/quality", label: t('footer.company_link5') },
+    { href: "/sustainability", label: t('footer.company_link6') }
   ]
 
   const socialLinks = [
@@ -100,9 +104,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm">
-                      {link}
-                    </a>
+                    <Link to={link.href} className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -114,9 +118,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.products.map((link, index) => (
                   <li key={index}>
-                    <a href="#" className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm">
-                      {link}
-                    </a>
+                    <Link to={link.href} className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm">
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -126,14 +130,14 @@ const Footer = () => {
             <div>
               <h3 className="text-lg font-semibold mb-6">{t('footer.company_title')}</h3>
               <div className="flex flex-col space-y-4">
-                {company.map((company, index) => (
-                  <a
+                {company.map((companyLink, index) => (
+                  <Link
                     key={index}
-                    href={company.href}
+                    to={companyLink.href}
                     className="text-white/70 hover:text-agri-secondary transition-colors duration-200 text-sm"
                   >
-                    {company.label}
-                  </a>
+                    {companyLink.label}
+                  </Link>
                 ))}
               </div>
             </div>

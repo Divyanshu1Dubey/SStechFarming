@@ -15,8 +15,21 @@ import LanguageModal from "@/components/LanguageModal";
 import Career from "./components/CareerOpportunities";
 import Research from "./components/Research&Development";
 import Quality from "./components/Quality";
+import OurVision from "./components/OurVision";
+import EquipmentRental from "./components/EquipmentRental";
+import SoilMonitoring from "./components/SoilMonitoring";
+import ConsultingServices from "./components/ConsultingServices";
+import HydroponicsInstallation from "./components/HydroponicsInstallation";
+import BulkOrders from "./components/BulkOrders";
+import CustomPackaging from "./components/CustomPackaging";
+import RequestQuote from "./components/RequestQuote";
+import Catalog from "./components/Catalog";
+import AnalyticsTracker from "./components/Analytics";
+import AnalyticsDashboard from "./components/AnalyticsDashboard";
+import UserAnalyticsDashboard from "./components/UserAnalyticsDashboard";
 import { useTranslation } from "react-i18next";
 import Sustainability from "./components/Sustainability";
+import analytics from "./lib/analytics";
 
 const queryClient = new QueryClient();
 
@@ -42,7 +55,11 @@ const App = () => {
   }, [i18n]);
 
   const handleSelectLanguage = (lang: string) => {
+    const currentLang = i18n.language;
     i18n.changeLanguage(lang);
+
+    // Track language change
+    analytics.trackLanguageChange(currentLang, lang);
 
     // ✅ Save to cookie for 1 year
     document.cookie = `preferredLanguage=${lang}; path=/; max-age=${60 * 60 * 24 * 365}`;
@@ -59,6 +76,7 @@ const App = () => {
         {showModal && <LanguageModal onSelect={handleSelectLanguage} />}
 
         <BrowserRouter>
+          <AnalyticsTracker />
           <Routes>
             <Route
               path="/"
@@ -129,6 +147,94 @@ const App = () => {
               element={
                 <Layout>
                   <Sustainability />
+                </Layout>
+              }
+            />
+            <Route
+              path="/our-vision"
+              element={
+                <Layout>
+                  <OurVision />
+                </Layout>
+              }
+            />
+            <Route
+              path="/equipment-rental"
+              element={
+                <Layout>
+                  <EquipmentRental />
+                </Layout>
+              }
+            />
+            <Route
+              path="/soil-monitoring"
+              element={
+                <Layout>
+                  <SoilMonitoring />
+                </Layout>
+              }
+            />
+            <Route
+              path="/consulting-services"
+              element={
+                <Layout>
+                  <ConsultingServices />
+                </Layout>
+              }
+            />
+            <Route
+              path="/hydroponics-installation"
+              element={
+                <Layout>
+                  <HydroponicsInstallation />
+                </Layout>
+              }
+            />
+            <Route
+              path="/bulk-orders"
+              element={
+                <Layout>
+                  <BulkOrders />
+                </Layout>
+              }
+            />
+            <Route
+              path="/custom-packaging"
+              element={
+                <Layout>
+                  <CustomPackaging />
+                </Layout>
+              }
+            />
+            <Route
+              path="/request-quote"
+              element={
+                <Layout>
+                  <RequestQuote />
+                </Layout>
+              }
+            />
+            <Route
+              path="/catalog"
+              element={
+                <Layout>
+                  <Catalog />
+                </Layout>
+              }
+            />
+            <Route
+              path="/analytics"
+              element={
+                <Layout>
+                  <AnalyticsDashboard />
+                </Layout>
+              }
+            />
+            <Route
+              path="/user-analytics"
+              element={
+                <Layout>
+                  <UserAnalyticsDashboard />
                 </Layout>
               }
             />

@@ -4,9 +4,40 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useTranslation } from "react-i18next";
+import analytics from "@/lib/analytics";
+import { useState } from "react";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    // Track form submission
+    analytics.trackContactForm('form_submit', formData);
+    analytics.trackCustomEvent('contact_form_submission', {
+      language: t('navigation.home'), // Current language indicator
+      serviceInterest: formData.service,
+      hasPhone: !!formData.phone
+    });
+  };
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    
+    // Track form field interactions
+    analytics.trackCustomEvent('contact_form_field', {
+      field,
+      hasValue: !!value,
+      language: t('navigation.home')
+    });
+  };
 
   const contactInfo = [
     {
@@ -112,7 +143,7 @@ const Contact = () => {
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <form action="https://formspree.io/f/mpwjnpgp" method="POST" className="space-y-6">
+                  <form action="https://formspree.io/f/mpwjnpgp" method="POST" className="space-y-6" onSubmit={handleFormSubmit}>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label className="text-sm font-medium text-foreground mb-2 block">

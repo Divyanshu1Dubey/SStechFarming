@@ -1,8 +1,16 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "ss-techfarming-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "SS TechFarming India - Advanced Mushroom Cultivation & Precision Farming Solutions",
+  "author": "SS TechFarming India Private Limited",
+  "homepage": "https://sstechfarmingindia.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Divyanshu1Dubey/SStechFarming.git"
+  },
+  "keywords": ["agriculture", "mushroom farming", "precision farming", "agritech", "AI farming", "hydroponics"],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -46,6 +54,7 @@
     "cmdk": "^1.1.1",
     "date-fns": "^3.6.0",
     "embla-carousel-react": "^8.6.0",
+    "framer-motion": "^12.23.19",
     "i18next": "^25.5.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
