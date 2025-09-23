@@ -48,10 +48,10 @@ const Navigation = () => {
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-foreground leading-tight bg-gradient-to-r from-agri-primary to-agri-secondary bg-clip-text text-transparent">
-                SS TechFarming India
+                SS TechFarming
               </h1>
               <p className="text-sm text-muted-foreground font-medium">
-                Complete Agricultural Solutions
+                {/* Complete Agricultural Solutions */}India 
               </p>
             </div>
           </Link>

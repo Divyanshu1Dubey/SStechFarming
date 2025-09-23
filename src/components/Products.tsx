@@ -31,7 +31,7 @@ const Products = () => {
         "Technical support included"
       ],
       badge: "Lab Grade",
-      image: "https://images.unsplash.com/photo-1505497531331-ecab4f042a8c?w=400&h=250&fit=crop&crop=center"
+      image: "/src/assets/mushroom-products.jpg"
     },
     {
       icon: Package,
@@ -68,7 +68,8 @@ const Products = () => {
         "Bulk packaging available"
       ],
       badge: "Canned",
-      image: "https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=400&h=250&fit=crop&crop=center"
+      image: "/src/assets/mushroom-products.jpg"
+      // https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=400&h=250&fit=crop&crop=center
     },
     {
       icon: Package,
@@ -484,7 +485,7 @@ const Products = () => {
               </Button>
             </Link>
             <Link to="/catalog">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white">
+              <Button size="lg" variant="outline" className="border-2 border-white text-black">
                 <Package className="w-5 h-5 mr-2" />
                 {t('products.cta_catalog')}
               </Button>
